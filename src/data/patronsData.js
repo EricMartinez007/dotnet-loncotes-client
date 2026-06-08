@@ -22,3 +22,9 @@ export const deactivatePatron = (id) => {
     method: "PUT",
   })
 };
+
+export const activatePatron = (id) => {
+  return fetch(`${_apiUrl}/${id}/activate`, {
+    method: "PUT",
+  })
+}
