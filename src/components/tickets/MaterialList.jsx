@@ -14,7 +14,6 @@ export default function MaterialList() {
     <div className="container">
       <div className="sub-menu bg-light">
         <h4>Materials</h4>
-        <Link to="/materials/create">Add</Link>
       </div>
       <Table>
         <thead>
@@ -34,12 +33,13 @@ export default function MaterialList() {
               <td>{m.materialType.name}</td>
               <td>{m.genre.name}</td>
               <td>
-                <Link to={`${m.id}`}>Details</Link>
+                <Link to={`${m.id}`} className="btn btn-primary">Details</Link>
               </td>
             </tr>
           ))}
         </tbody>
       </Table>
+      <Link to="/materials/create" className="btn btn-primary">Add</Link>
     </div>
   );
 }
